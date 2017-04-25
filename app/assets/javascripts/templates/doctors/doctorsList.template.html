@@ -1,4 +1,20 @@
 <ul>
-  <li>Doctors:</li>
   <li ng-repeat="doctor in doctorsListCtrl.doctors">{{ doctor.name }}</li>
 </ul>
+
+<table>
+  <thead>
+    <th></th>
+    <th>Doctor</th>
+    <th>Specialty</th>
+    <th>Accepts Insurance</th>
+  </thead>
+  <tr ng-repeat="doctor in ctrl.doctors">
+    <td>
+      <img ng-src="{{ doctor.photo_url }}" width="120" />
+    </td>
+    <td>{{ doctor.name }}</td>
+    <td>{{ doctor.specialty }}</td>
+    <td>{{ doctor.accepts_insurance }}</td>
+  </tr>
+</table>

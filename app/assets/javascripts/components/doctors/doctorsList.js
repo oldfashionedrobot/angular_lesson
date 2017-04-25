@@ -3,17 +3,18 @@ angular
   .component('doctorsList', {
   templateUrl: 'doctors/doctorsList.template.html',
   controller: DoctorsListController,
-  controllerAs: 'doctorsListCtrl'
+  controllerAs: 'ctrl'
 });
 
+DoctorsListController.$inject = ['$http'];
 
-function DoctorsListController($scope, $http) {
+function DoctorsListController($http) {
 
   var vm = this;
 
-  vm.doctors = [
-    { name: 'Dr. Mantis Toboggan' },
-    { name: 'Dr. Jan Itor' }
-  ];
+  vm.doctors = [];
 
+  $http.get('/api/doctors').then(function(resp) {
+    vm.doctors = resp.data;
+  });
 }
