@@ -1,0 +1,17 @@
+<form>
+  <label>Name</label>
+  <input type="text" ng-model="ctrl.newDoctor.name" />
+  <br/>
+  <label>Specialty</label>
+  <input type="text" ng-model="ctrl.newDoctor.specialty" />
+  <br/>
+  <label>Accepts Insurance</label>
+  <input type="checkbox" ng-model="ctrl.newDoctor.accepts_insurance" ng-true-value="true" ng-false-value="false" />
+  <br/>
+  <label>Photo Url</label>
+  <input type="text" ng-model="ctrl.newDoctor.photo_url" />
+  <br/>
+  <img ng-src="{{ ctrl.newDoctor.photo_url }}" width="200">
+  <br/>
+  <button ng-click="ctrl.createDoctor()">Save</button>
+</form>

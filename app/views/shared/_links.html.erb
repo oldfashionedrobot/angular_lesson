@@ -2,13 +2,12 @@
 <% if user_signed_in? %>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method => 'delete' %></li>
+  <li>________________</li>
+
+  <li><a href="/doctors" ui-sref="doctors">Doctors</a></li>
+  <li><a href="/appointments" ui-sref="appointments">Appointments</a></li>
 <% else %>
   <li><%= link_to 'Sign in', new_user_session_path %></li>
   <li><%= link_to 'Sign up', new_user_registration_path %></li>
 <% end %>
-</ul>
-
-<ul>
-  <li><%= link_to 'Doctors', doctors_path %></li>
-  <li><%# link_to 'Appointments', appointments_path %></li>
 </ul>

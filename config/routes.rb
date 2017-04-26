@@ -10,10 +10,8 @@ Rails.application.routes.draw do
     resources :doctors
   end
 
-  # Because we aren't using UI router,
-  # We use these routes to ultimately serve up Angular views
-  resources :doctors, only: [:index]
-  resources :appointments, only: [:index]
-
-  root to: 'doctors#index'
+  # we want all other routes to just render out angular front end,
+  # and let ui.router work from there
+  root to: 'client#index'
+  get '*path', to: 'client#index'
 end

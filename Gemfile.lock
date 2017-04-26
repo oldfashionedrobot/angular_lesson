@@ -42,7 +42,8 @@ GEM
       railties (>= 4.2, < 6)
       sprockets (>= 3.0, < 5)
       tilt
-    angularjs-rails (1.6.2)
+    angular_rails_csrf (2.0.0)
+      railties (>= 3, < 5.1)
     arel (7.1.4)
     bcrypt (3.1.11)
     bindex (0.5.0)
@@ -170,7 +171,7 @@ PLATFORMS
 
 DEPENDENCIES
   angular-rails-templates
-  angularjs-rails
+  angular_rails_csrf
   byebug
   devise
   faker (~> 1.7)

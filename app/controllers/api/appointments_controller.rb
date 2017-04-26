@@ -5,7 +5,7 @@ class Api::AppointmentsController < ApplicationController
   def index
     @appointments = Appointment.all
 
-    render json: @appointments
+    render json: @appointments.to_json(include: [:user, :doctor])
   end
 
   # GET /appointments/1

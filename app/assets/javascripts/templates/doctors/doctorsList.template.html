@@ -4,6 +4,7 @@
     <th>Doctor</th>
     <th>Specialty</th>
     <th>Accepts Insurance</th>
+    <th></th>
   </thead>
   <tr ng-repeat="doctor in ctrl.doctors">
     <td>
@@ -12,5 +13,7 @@
     <td>{{ doctor.name }}</td>
     <td>{{ doctor.specialty }}</td>
     <td>{{ doctor.accepts_insurance }}</td>
+    <td><a ui-sref="doctor_show({ id: doctor.id })">Show</a></td>
   </tr>
 </table>
+<a ui-sref="doctor_new">Create Doctor</a>

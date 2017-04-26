@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <th></th>
+    <th>Doctor</th>
+    <th>Patient</th>
+    <th>Reason</th>
+    <th>Date</th>
+  </thead>
+  <tr ng-repeat="appointment in ctrl.appointments">
+    <td>
+      <img ng-src="{{ appointment.doctor.photo_url }}" width="120" />
+    </td>
+    <td>{{ appointment.doctor.name }}</td>
+    <td>{{ appointment.user.name }}</td>
+    <td>{{ appointment.reason }}</td>
+    <td>{{ appointment.date | date }}</td>
+  </tr>
+</table>
